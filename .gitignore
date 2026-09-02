@@ -27,6 +27,12 @@ npm-debug.log*
 .env.local
 .env.*.local
 
+# Claude Code
+.claude/
+.agents/
+memory/
+skills-lock.json
+
 # Design files (CorelDRAW, Adobe Illustrator, etc.)
 *.cdr
 *.ai
