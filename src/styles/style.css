@@ -1,11 +1,21 @@
 /* CSS Reset e Configurações Gerais */
 *,
 *::before,
-function css_Drivers_OneDriveLeo_OneDrive_Coi_10_19_l47282 >
-{
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #0b1d3a;
+  --secondary-color: #8b0000;
+  --accent-color: #d97706;
+  --text-color: #333333;
+  --text-light: #666666;
+  --bg-light: #f8fafc;
+  --white: #ffffff;
+  --transition: all 0.3s ease;
 }
 
 html {
@@ -15,21 +25,24 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
   line-height: 1.6;
-  color: #333;
-  background-color: #fff;
-  margin: 0;
-  margin-top: 0;
-  margin-top: 0;
+  color: var(--text-color);
+  background-color: var(--white);
 }
 
 a {
   text-decoration: none;
   color: inherit;
-  transition: color 0.3s ease;
+  transition: var(--transition);
 }
 
 ul {
   list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Container */
@@ -39,63 +52,759 @@ ul {
   padding: 0 20px;
 }
 
-/* Header */
+/* Header & Navbar */
 .header {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  top: 0;
-  left: 0;
-  right: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   z-index: 1000;
-  top: 0;
-  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  height: 55px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--primary-color);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-link {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--text-color);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--secondary-color);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: #6a0000;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.btn-outline:hover {
+  background-color: var(--white);
+  color: var(--primary-color);
+}
+
+.btn-large {
+  padding: 16px 32px;
+  font-size: 16px;
+}
+
+.btn-link {
+  color: var(--secondary-color);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-link:hover {
+  color: #6a0000;
+  gap: 12px;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 6px;
+  padding: 5px;
+}
+
+.hamburger span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: var(--primary-color);
+  transition: var(--transition);
+  border-radius: 2px;
 }
 
 /* Mobile Menu */
 .mobile-menu {
   display: none;
   position: fixed;
-  top: 80px;
-  right: 0;
-  width: 100%;
-  background: #fff;
-  padding: 30px 30px 70px 30px;
-  top: 80px;
+  top: 90px;
   left: 0;
-  right: 0;
+  width: 100%;
+  background: var(--white);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  padding: 30px;
   z-index: 999;
-    top: 80px;
-    left: 0;
-    right: 0;
-    z-index: 999;
-    position: fixed;
-    top: 80px;
-    background: #fff;
-    paddingfigureAN folders ont been able to be compiled along the modules that are included in the work. I'm trying to follow the summary. Resuming from the last saved state: awaiting further instructions. I'll proceed with generating the output based on the summary.
+}
 
-The user wants me to continue from where the conversation left off. The summary says the current topic is about creating a modern, professional, responsive website for Tereshkova Engineering (an electrical engineering company), with specific requirements like no AI-looking design, mobile menu, form with Formspree, basic SEO, etc. The previous conversation was about analyzing logos, and the summary says the current topic is about analyzing logos, and that the selected logo should be "logo_written_below.png" for use on the SITE, and to use technologies like Astro for easier editing and performance.
+.mobile-menu.active {
+  display: block;
+}
 
-I need to pick up where the summary left off. The summary says: "1. Primary Request and Intent: Create a modern, professional, and responsive website for Tereshkova Engineering (electrical engineering) ... 2. Key Technical Concepts: HTML5 semantic, CSS3 modern with Flexbox/Grid, JavaScript for interactivity (mobile menu, form), Responsive Design, Formspree for forms, basic SEO, style: white cards with soft shadows, buttons #E53E3E, Feather icons/Astro ... 3. Files and Code Sections: index.html created with hero section, featured services, "Why choose us", CTA; servic.ese.html with detailed list of 7 services; about.html with history, mission/vision/values, differentiators; contato.html failed on first attempt, needs to be recreated; 4. css/style.css not yet created (next step); 5) js/script.js: not yet created; 5) logo selection: User recommended 'logo_written_below.png' as most suitable for the SITE; 5) technology user requested Astro for better performance and ease of editing."
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
 
-The summary says we are at: pending tasks: recreate contact.html, create complete Astro structure (package.json, astro.config.mjs, etc), create Astro components for header, footer, cards, create style.css with all styles defined, copy selected logo to images/, download example images for the site.
+.mobile-nav-link {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
 
-The summary says we are at: "Optional Next Step: Recreate contato.html, create complete Astro structure..., copy selected logo to images/, download example images for the site"
+.mobile-cta {
+  margin-top: 10px;
+  width: 100%;
+}
 
-I need to continue the conversation from where it left off. No need to acknowledge the summary, no need to recap what was happening, no need to preface with "I'll continue". I'll pick up the last task as if the break never happened.
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  background: linear-gradient(rgba(11, 29, 58, 0.8), rgba(11, 29, 58, 0.8)), url('/images/obra-concluida.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--white);
+  padding-top: 90px;
+}
 
-I need to create the contact page in HTML (contato.html) as previously requested, complete the Astro structure (package.json, astro.config.mjs, etc.), create Astro components for header, footer, cards, create style.css with all styles defined, copy selected logo to images/, download example images for the site.
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
 
-The summary says we are at: "Optional Next Step: Recreate contato.html, create complete Astro structure..., copy selected logo to images/, download example images for the site"
+.hero-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
 
-I need to re-create contato.html. I should create the complete Astro structure (package.json, astro.config.mjs, etc.), create Astro components for header, footer, cards, create style.css with all styles defined, copy selected logo to images/, download example images for the site.
+.hero-subtitle {
+  font-size: 18px;
+  margin-bottom: 35px;
+  color: #e2e8f0;
+}
 
-I'll start by re-creating contato.html based on the earlier design, but this time using Astro syntax and the selected logo. I need to re-create contato.html using the selected logo and Astro syntax. Let me first check what's in the current directory and also check if there's a existing contato.html or similar:
-<tool_call>
-<function=Glob>
-<parameter=pattern>
-**/*
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Sections General */
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Services Featured & Grid */
+.services-featured,
+.services-section {
+  background-color: var(--bg-light);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: var(--white);
+  padding: 40px 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: var(--transition);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.service-icon {
+  font-size: 36px;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+.service-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.service-description {
+  color: var(--text-light);
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+/* Why Choose Us */
+.why-choose-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.why-choose-image img {
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.why-choose-content .section-title {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.why-choose-text {
+  color: var(--text-light);
+  margin-bottom: 25px;
+}
+
+.differentials-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.differential-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.differential-item i {
+  color: var(--secondary-color);
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, var(--primary-color), #1e3a8a);
+  color: var(--white);
+  text-align: center;
+}
+
+.cta-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--white);
+}
+
+.cta-subtitle {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #cbd5e1;
+}
+
+/* Page Header */
+.page-header {
+  background: linear-gradient(rgba(11, 29, 58, 0.85), rgba(11, 29, 58, 0.85)), url('/images/obra-concluida.jpg') center/cover no-repeat;
+  padding: 140px 0 60px;
+  text-align: center;
+  color: var(--white);
+}
+
+.page-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.page-subtitle {
+  font-size: 16px;
+  color: #cbd5e1;
+}
+
+/* Services Detail */
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.service-detail-card {
+  background: var(--white);
+  padding: 35px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  border-top: 4px solid var(--secondary-color);
+}
+
+.service-detail-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.service-detail-icon {
+  font-size: 28px;
+  color: var(--secondary-color);
+}
+
+.service-detail-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.service-detail-description {
+  color: var(--text-light);
+  font-size: 15px;
+}
+
+.services-cta {
+  text-align: center;
+  background: var(--white);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.services-cta-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+/* About / History */
+.history-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.history-content .section-title {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.history-text {
+  color: var(--text-light);
+  margin-bottom: 15px;
+}
+
+.history-image img {
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.mvv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.mvv-card {
+  background: var(--white);
+  padding: 40px 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.mvv-icon {
+  font-size: 36px;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+.mvv-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.mvv-description {
+  color: var(--text-light);
+  font-size: 15px;
+}
+
+.differentiators-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.differentiator-card {
+  background: var(--bg-light);
+  padding: 30px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.differentiator-icon {
+  font-size: 28px;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.differentiator-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.differentiator-text {
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+/* Contact Page */
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.contact-info-card {
+  background: var(--bg-light);
+  padding: 35px 25px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.contact-info-icon {
+  font-size: 32px;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.contact-info-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.contact-info-text {
+  color: var(--text-light);
+  font-size: 15px;
+}
+
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--white);
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+}
+
+.form-subtitle {
+  text-align: center;
+  color: var(--text-light);
+  margin-bottom: 30px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group.full-width {
+  grid-column: span 2;
+}
+
+.form-label {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  transition: var(--transition);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(11, 29, 58, 0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-submit {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 70px 0 20px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.footer-logo-img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.footer-logo-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--white);
+}
+
+.footer-description {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.footer-column-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.footer-links,
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-link {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.footer-link:hover {
+  color: var(--white);
+  padding-left: 5px;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.footer-contact-item i {
+  color: var(--secondary-color);
+  margin-top: 4px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  color: var(--white);
+  transition: var(--transition);
+}
+
+.social-link:hover {
+  background: var(--secondary-color);
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 20px;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.developed-by {
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .navbar {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .why-choose-container,
+  .history-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+
+  .form-container {
+    padding: 30px 20px;
+  }
+}
