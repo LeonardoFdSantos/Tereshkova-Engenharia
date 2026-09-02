@@ -1,0 +1,205 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Contato | Tereshkova Engenharia"
+  description="Entre em contato com a Tereshkova Engenharia para solicitar orçamentos e informações sobre nossos serviços de engenharia elétrica."
+  keywords="contato Tereshkova Engenharia, orçamento engenharia elétrica, fale conosco, solicite orçamento"
+>
+  <Header />
+
+  <main>
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-title">Fale Conosco</h1>
+        <p class="page-subtitle">Estamos prontos para ajudar com seu projeto de engenharia elétrica.</p>
+      </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="section contact-info-section">
+      <div class="container">
+        <div class="contact-info-grid">
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
+            <h3 class="contact-info-title">Telefone</h3>
+            <p class="contact-info-text">(69) 99215-8799</p>
+            <p class="contact-info-text">(55) 99642-7551</p>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+            <h3 class="contact-info-title">E-mail</h3>
+            <p class="contact-info-text">tereshkova.engenharia@gmail.com</p>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <h3 class="contact-info-title">Endereço</h3>
+            <p class="contact-info-text">Rua João da Fontoura e Souza, 215<br>Camobi, Santa Maria/RS - CEP: 97.105-210</p>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><i class="fas fa-clock"></i></div>
+            <h3 class="contact-info-title">Horário</h3>
+            <p class="contact-info-text">Seg - Sex: 08h às 18h<br>Sáb: 08h às 12h</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="section form-section" id="formulario">
+      <div class="container">
+        <div class="form-container">
+          <h2 class="section-title">Solicite um Orçamento</h2>
+          <p class="form-subtitle">Preencha o formulário abaixo e entraremos em contato o mais breve possível.</p>
+
+          <form
+            action="https://formspree.io/f/mxxvjqkn"
+            method="POST"
+            class="contact-form"
+            id="contact-form"
+          >
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="name" class="form-label">Nome Completo *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-input"
+                  placeholder="Digite seu nome"
+                  required
+                >
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-label">E-mail *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="seu@email.com"
+                  required
+                >
+              </div>
+              <div class="form-group">
+                <label for="phone" class="form-label">Telefone</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="form-input"
+                  placeholder="(XX) XXXXX-XXXX"
+                >
+              </div>
+              <div class="form-group">
+                <label for="company" class="form-label">Empresa</label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  class="form-input"
+                  placeholder="Nome da empresa"
+                >
+              </div>
+              <div class="form-group full-width">
+                <label for="service" class="form-label">Serviço de Interesse *</label>
+                <select id="service" name="service" class="form-input form-select" required>
+                  <option value="" disabled selected>Selecione um serviço</option>
+                  <option value="projetos-eletricos">Projetos Elétricos</option>
+                  <option value="automacoes">Automações Elétricas</option>
+                  <option value="instalacao-residencial">Instalação Elétrica Residencial</option>
+                  <option value="instalacao-industrial">Instalação Elétrica Industrial</option>
+                  <option value="reparos">Reparos Elétricos</option>
+                  <option value="quadros">Quadros Elétricos e Medições</option>
+                  <option value="laudos">Laudos Técnicos e Medições</option>
+                  <option value="outro">Outro</option>
+                </select>
+              </div>
+              <div class="form-group full-width">
+                <label for="message" class="form-label">Mensagem *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form-input form-textarea"
+                  placeholder="Descreva seu projeto ou dúvida..."
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <p class="form-privacy">
+                <i class="fas fa-lock"></i> Seus dados estão seguros. Não compartilhamos informações com terceiros.
+              </p>
+              <button type="submit" class="btn btn-primary btn-large" id="submit-btn">
+                <span>Enviar Mensagem</span>
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </form>
+
+          <div class="form-status" id="form-status"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section (Placeholder) -->
+    <section class="section map-section">
+      <div class="container">
+        <div class="map-placeholder">
+          <i class="fas fa-map-marked-alt"></i>
+          <p>Mapa interativo em breve</p>
+          <p class="map-address">Rua Exemplo, 123 - Cidade/UF</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<script>
+  // Form submission handling
+  document.getElementById('contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const submitBtn = document.getElementById('submit-btn');
+    const formStatus = document.getElementById('form-status');
+
+    // Show loading state
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span>Enviando...</span> <i class="fas fa-spinner fa-spin"></i>';
+    formStatus.textContent = '';
+    formStatus.className = 'form-status';
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        formStatus.innerHTML = '<i class="fas fa-check-circle"></i> Mensagem enviada com sucesso! Entraremos em contato em breve.';
+        formStatus.className = 'form-status success';
+        form.reset();
+      } else {
+        throw new Error('Erro ao enviar');
+      }
+    } catch (error) {
+      formStatus.innerHTML = '<i class="fas fa-exclamation-circle"></i> Ocorreu um erro. Por favor, tente novamente mais tarde.';
+      formStatus.className = 'form-status error';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = '<span>Enviar Mensagem</span> <i class="fas fa-paper-plane"></i>';
+    }
+  });
+</script>

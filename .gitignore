@@ -1,0 +1,58 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Astro cache
+.astro/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Design files (CorelDRAW, Adobe Illustrator, etc.)
+*.cdr
+*.ai
+*.pdf
+*.svg
+
+# Font files (raw design fonts)
+LOGO/fontes/
+
+# Backup files
+*Cópia*
+*backup*
+
+# Temporary files
+*.tmp
+*.temp
+
+# Image source files (keep only optimized versions)
+LOGO/LOGO_COM_LEGENDA*.pdf
+LOGO/MODELO.jpg
+LOGO/cartaofrente-.*
+LOGO/cartaoverso.*
+LOGO/logoo.ai
+LOGO/qualafonte.png
+LOGO/LOGO_COM_LEGENDA_*.pdf
+
+# Keep only these from LOGO folder
+!LOGO/logo_escrito_ao_lado.png
+!LOGO/logo_escrito_em-baixo.png

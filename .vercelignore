@@ -1,0 +1,6 @@
+.git
+.astro
+node_modules
+LOGO/
+README.md
+*.log

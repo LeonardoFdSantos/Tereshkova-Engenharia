@@ -1,0 +1,23 @@
+import { d as maybeRenderHead, i as renderComponent, u as renderTemplate } from "./server_DLhQjhce.mjs";
+import { t as createComponent } from "./compiler_Dw28oF9s.mjs";
+import { n as $$Header, r as $$BaseLayout, t as $$Footer } from "./Footer_Dji212un.mjs";
+import { t as __exportAll } from "./contato_DWc-K2xX.mjs";
+//#region src/pages/index.astro
+var pages_exports = /* @__PURE__ */ __exportAll({
+	default: () => $$Index,
+	file: () => $$file,
+	url: () => ""
+});
+var $$Index = createComponent(($$result, $$props, $$slots) => {
+	return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, {
+		"title": "Tereshkova Engenharia | Soluções em Engenharia Elétrica",
+		"description": "Empresa especializada em projetos, automação e manutenção elétrica para residências, indústrias e empresas.",
+		"keywords": "engenharia elétrica, projetos elétricos, automação, manutenção elétrica, laudos técnicos, Tereshkova Engenharia"
+	}, { "default": ($$result) => renderTemplate`${renderComponent($$result, "Header", $$Header, {})}${maybeRenderHead($$result)}<main><!-- Hero Section --><section class="hero"><div class="hero-overlay"></div><div class="hero-content container"><h1 class="hero-title">Soluções em Engenharia Elétrica com Excelência e Segurança</h1><p class="hero-subtitle">Projetos, automação e manutenção para residências, indústrias e empresas.</p><div class="hero-buttons"><a href="/servicos" class="btn btn-outline">Nossos Serviços</a><a href="/contato#formulario" class="btn btn-primary">Fale Conosco</a></div></div></section><!-- Serviços em Destaque --><section class="section services-featured"><div class="container"><h2 class="section-title">Nossos Serviços</h2><div class="services-grid"><article class="service-card"><div class="service-icon"><i class="fas fa-drafting-compass"></i></div><h3 class="service-title">Projetos Elétricos</h3><p class="service-description">Residencial, industrial, preventivo e corretivo. Conformidade com normas técnicas.</p><a href="/servicos#projetos-eletricos" class="btn btn-link">Saiba Mais <i class="fas fa-arrow-right"></i></a></article><article class="service-card"><div class="service-icon"><i class="fas fa-cogs"></i></div><h3 class="service-title">Automações Elétricas</h3><p class="service-description">Sistemas inteligentes para otimizar energia e segurança.</p><a href="/servicos#automacoes" class="btn btn-link">Saiba Mais <i class="fas fa-arrow-right"></i></a></article><article class="service-card"><div class="service-icon"><i class="fas fa-clipboard-check"></i></div><h3 class="service-title">Laudos Técnicos e Medições</h3><p class="service-description">Análises precisas para conformidade e eficiência.</p><a href="/servicos#laudos" class="btn btn-link">Saiba Mais <i class="fas fa-arrow-right"></i></a></article></div></div></section><!-- Por Que Escolher --><section class="section why-choose"><div class="container why-choose-container"><div class="why-choose-image"><img src="/images/obra-concluida.jpg" alt="Obra elétrica concluída pela Tereshkova Engenharia" loading="lazy"></div><div class="why-choose-content"><h2 class="section-title">Qualidade e Confiança em Cada Projeto</h2><p class="why-choose-text">Na Tereshkova Engenharia, combinamos expertise técnico com compromisso inquebrantável com a segurança e a qualidade. Nossa equipe certificada garante soluções que atendem às mais rigorosas normas do setor.</p><ul class="differentials-list"><li class="differential-item"><i class="fas fa-check-circle"></i> Equipe especializada e certificada</li><li class="differential-item"><i class="fas fa-check-circle"></i> Prazos ágeis e transparentes</li><li class="differential-item"><i class="fas fa-check-circle"></i> Conformidade com NR-10 e normas ABNT</li><li class="differential-item"><i class="fas fa-check-circle"></i> Atendimento personalizado</li></ul><a href="/sobre" class="btn btn-primary">Conheça Nossa História</a></div></div></section><!-- CTA Section --><section class="section cta-section"><div class="container cta-container"><h2 class="cta-title">Precisa de um Orçamento?</h2><p class="cta-subtitle">Entre em contato e solicite uma avaliação sem compromisso.</p><a href="/contato#formulario" class="btn btn-primary btn-large">Solicite Agora</a></div></section></main>${renderComponent($$result, "Footer", $$Footer, {})}` })}`;
+}, "D:/Drivers/OneDriveLeo/OneDrive/Coisas_Leonardo/gits/Tereshkova_Engenharia/src/pages/index.astro", void 0);
+var $$file = "D:/Drivers/OneDriveLeo/OneDrive/Coisas_Leonardo/gits/Tereshkova_Engenharia/src/pages/index.astro";
+//#endregion
+//#region \0virtual:astro:page:src/pages/index@_@astro
+var page = () => pages_exports;
+//#endregion
+export { page };

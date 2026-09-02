@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Serviços | Tereshkova Engenharia"
+  description="Conheça todos os serviços de engenharia elétrica oferecidos pela Tereshkova Engenharia: projetos, automação, manutenção e mais."
+  keywords="serviços engenharia elétrica, projetos elétricos, automação industrial, manutenção elétrica, laudos técnicos, reparos elétricos"
+>
+  <Header />
+
+  <main>
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-title">Nossos Serviços</h1>
+        <p class="page-subtitle">Soluções completas em engenharia elétrica para todos os segmentos.</p>
+      </div>
+    </section>
+
+    <!-- Services List -->
+    <section class="section services-section">
+      <div class="container">
+        <div class="services-list">
+          <!-- Serviço 1 -->
+          <article class="service-detail-card" id="instalacao-residencial">
+            <div class="service-detail-header">
+              <div class="service-detail-icon"><i class="fas fa-home"></i></div>
+              <h3 class="service-detail-title">Instalação Elétrica Residencial</h3>
+            </div>
+            <p class="service-detail-description">
+              Projetos e execução de instalações elétricas para residências, com foco em segurança e eficiência energética.
+              Garantimos que sua casa tenha uma infraestrutura elétrica moderna, segura e em conformidade com todas as normas técnicas.
+            </p>
+          </article>
+
+          <!-- Serviço 2 -->
+          <article class="service-detail-card" id="instalacao-industrial">
+            <div class="service-detail-header">
+              <div class="service-detail-icon"><i class="fas fa-industry"></i></div>
+              <h3 class="service-detail-title">Instalação Elétrica Industrial e Preventiva/Corretiva</h3>
+            </div>
+            <p class="service-detail-description">
+              Soluções para indústrias, incluindo manutenção preventiva e corretiva para evitar paralisações.
+              Trabalhamos com sistemas de alta complexidade, garantindo a continuidade operacional do seu negócio.
+            </p>
+          </article>
+
+          <!-- Serviço 3 -->
+          <article class="service-detail-card" id="projetos-eletricos">
+            <div class="service-detail-header">
+              <div class="service-detail-icon"><i class="fas fa-drafting-compass"></i></div>
+              <h3 class="service-detail-title">Projetos Elétricos</h3>
+            </div>
+            <p class="service-detail-description">
+              Elaboração de projetos elétricos personalizados, alinhados às normas técnicas e necessidades do cliente.
+              Desde o conceito inicial até a documentação final, entregamos projetos precisos e executáveis.
+            </p>
+          </article>
+
+          <!-- Serviço 4 -->
+          <article class="service-detail-card" id="automacoes">
+            <div class="service-detail-header">
+              <div class="service-detail-icon"><i class="fas fa-cogs"></i></div>
+              <h3 class="service-detail-title">Automações Elétricas</h3>
+            </div>
+            <p class="service-detail-description">
+              Implementação de sistemas de automação para otimizar processos e reduzir custos.
+              Automatize suas operações com soluções inteligentes que aumentam a eficiência e reduzem o consumo de energia.
+            </p>
+          </article>
+
+          <!-- Serviço 5 -->
+          <article class="service-detail-card" id="reparos">
+            <div class="service-detail-header">
+              <div class="service-detail-icon"><i class="fas fa-tools"></i></div>
+              <h3 class="service-detail-title">Reparos Elétricos</h3>
+            </div>
+            <p class="service-detail-description">
+              Serviços de reparo e manutenção em sistemas elétricos, com diagnóstico rápido e soluções duradouras.
+              Nossa equipe está preparada para resolver desde problemas simples até falhas complexas em seu sistema elétrico.
+            </p>
+          </article>
+
+          <!-- Serviço 6 -->
+          <article class="service-detail-card" id="quadros">
+            <div class="service-detail-header">
+              <div class="service-detail-icon"><i class="fas fa-th"></i></div>
+              <h3 class="service-detail-title">Quadros Elétricos e Medições</h3>
+            </div>
+            <p class="service-detail-description">
+              Montagem e manutenção de quadros elétricos, além de medições precisas para conformidade.
+              Trabalhamos com os mais altos padrões de qualidade para garantir a segurança e o bom funcionamento de suas instalações.
+            </p>
+          </article>
+
+          <!-- Serviço 7 -->
+          <article class="service-detail-card" id="laudos">
+            <div class="service-detail-header">
+              <div class="service-detail-icon"><i class="fas fa-clipboard-check"></i></div>
+              <h3 class="service-detail-title">Laudos Técnicos e Medições</h3>
+            </div>
+            <p class="service-detail-description">
+              Emissão de laudos técnicos e realização de medições para atestar a segurança e eficiência das instalações.
+              Nossos laudos são reconhecidos por sua precisão e conformidade com as normas regulamentadoras.
+            </p>
+          </article>
+        </div>
+
+        <!-- CTA -->
+        <div class="services-cta">
+          <p class="services-cta-text">Precisa de um serviço específico ou tem dúvidas sobre nossas soluções?</p>
+          <a href="/contato#formulario" class="btn btn-primary btn-large">Solicite um Orçamento</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

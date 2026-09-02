@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Sobre | Tereshkova Engenharia"
+  description="Conheça a história, missão, visão e valores da Tereshkova Engenharia, empresa especializada em engenharia elétrica."
+  keywords="sobre Tereshkova Engenharia, história engenharia elétrica, missão visão valores, empresa engenharia elétrica"
+>
+  <Header />
+
+  <main>
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-title">Sobre a Tereshkova Engenharia</h1>
+      </div>
+    </section>
+
+    <!-- Nossa História -->
+    <section class="section history-section">
+      <div class="container">
+        <div class="history-container">
+          <div class="history-content">
+            <h2 class="section-title">Nossa História</h2>
+            <p class="history-text">
+              A <strong>Tereshkova Engenharia</strong> é uma empresa especializada em soluções em engenharia elétrica, fundada com o objetivo de oferecer <strong>qualidade, segurança e inovação</strong> em cada projeto.
+            </p>
+            <p class="history-text">
+              Nosso nome é uma homenagem à primeira mulher a ir ao espaço, <strong>Valentina Tereshkova</strong>, simbolizando nossa busca por superar limites e alcançar a excelência. Assim como ela quebrou barreiras, nós buscamos inovar constantemente no setor de engenharia elétrica.
+            </p>
+            <p class="history-text">
+              Com uma equipe de profissionais certificados e experientes, atuamos em diversos segmentos, desde residências até indústrias, sempre priorizando a conformidade com normas técnicas e a satisfação do cliente.
+            </p>
+            <p class="history-text">
+              Ao longo dos anos, construímos uma reputação sólida baseada em <strong>comprometimento, expertise técnico e relacionamento transparente</strong> com nossos clientes e parceiros.
+            </p>
+          </div>
+          <div class="history-image">
+            <img src="/images/equipe.jpg" alt="Equipe da Tereshkova Engenharia" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Missão, Visão e Valores -->
+    <section class="section mvv-section">
+      <div class="container">
+        <h2 class="section-title">Missão, Visão e Valores</h2>
+        <div class="mvv-grid">
+          <article class="mvv-card">
+            <div class="mvv-icon"><i class="fas fa-bullseye"></i></div>
+            <h3 class="mvv-title">Missão</h3>
+            <p class="mvv-description">Fornecer soluções em engenharia elétrica com qualidade, segurança e eficiência, superando as expectativas dos clientes.</p>
+          </article>
+          <article class="mvv-card">
+            <div class="mvv-icon"><i class="fas fa-eye"></i></div>
+            <h3 class="mvv-title">Visão</h3>
+            <p class="mvv-description">Ser referência em inovação e excelência no setor de engenharia elétrica no Brasil.</p>
+          </article>
+          <article class="mvv-card">
+            <div class="mvv-icon"><i class="fas fa-heart"></i></div>
+            <h3 class="mvv-title">Valores</h3>
+            <p class="mvv-description">Ética, transparência, compromisso com a segurança e busca constante por melhoria contínua.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section class="section differentiators-section">
+      <div class="container">
+        <h2 class="section-title">Nossos Diferenciais</h2>
+        <div class="differentiators-grid">
+          <div class="differentiator-card">
+            <div class="differentiator-icon"><i class="fas fa-certificate"></i></div>
+            <h4 class="differentiator-title">Equipe Certificada</h4>
+            <p class="differentiator-text">Todos os nossos profissionais são certificados e passam por treinamentos contínuos.</p>
+          </div>
+          <div class="differentiator-card">
+            <div class="differentiator-icon"><i class="fas fa-shield-alt"></i></div>
+            <h4 class="differentiator-title">Segurança Acima de Tudo</h4>
+            <p class="differentiator-text">Seguimos rigorosamente a NR-10 e todas as normas de segurança do setor.</p>
+          </div>
+          <div class="differentiator-card">
+            <div class="differentiator-icon"><i class="fas fa-clock"></i></div>
+            <h4 class="differentiator-title">Prazos Garantidos</h4>
+            <p class="differentiator-text">Comprometemo-nos com prazos realistas e os cumprimos com transparência.</p>
+          </div>
+          <div class="differentiator-card">
+            <div class="differentiator-icon"><i class="fas fa-handshake"></i></div>
+            <h4 class="differentiator-title">Relacionamento Próximo</h4>
+            <p class="differentiator-text">Mantemos comunicação constante com nossos clientes durante todo o projeto.</p>
+          </div>
+          <div class="differentiator-card">
+            <div class="differentiator-icon"><i class="fas fa-lightbulb"></i></div>
+            <h4 class="differentiator-title">Soluções Inovadoras</h4>
+            <p class="differentiator-text">Utilizamos as mais modernas tecnologias e metodologias do mercado.</p>
+          </div>
+          <div class="differentiator-card">
+            <div class="differentiator-icon"><i class="fas fa-check-double"></i></div>
+            <h4 class="differentiator-title">Qualidade Comprovada</h4>
+            <p class="differentiator-text">Nossos serviços são respaldados por garantia e pelo histórico de satisfação dos clientes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+      <div class="container cta-container">
+        <h2 class="cta-title">Pronto para começar seu projeto?</h2>
+        <p class="cta-subtitle">Entre em contato e descubra como podemos ajudar sua empresa ou residência.</p>
+        <a href="/contato#formulario" class="btn btn-primary btn-large">Fale Conosco</a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>
