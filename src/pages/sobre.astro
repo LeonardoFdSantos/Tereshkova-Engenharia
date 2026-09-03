@@ -2,12 +2,13 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import CtaSection from '../components/CtaSection.astro';
 ---
 
 <BaseLayout
   title="Sobre | Tereshkova Engenharia"
-  description="Conheça a história, missão, visão e valores da Tereshkova Engenharia, empresa especializada em engenharia elétrica."
-  keywords="sobre Tereshkova Engenharia, história engenharia elétrica, missão visão valores, empresa engenharia elétrica"
+  description="Conheça a história, missão, visão e valores da Tereshkova Engenharia, empresa especializada em engenharia elétrica com padrão de excelência."
+  keywords="sobre Tereshkova Engenharia, história, missão, visão, valores, engenharia elétrica Santa Maria"
 >
   <Header />
 
@@ -15,107 +16,97 @@ import Footer from '../components/Footer.astro';
     <!-- Page Header -->
     <section class="page-header">
       <div class="container">
-        <h1 class="page-title">Sobre a Tereshkova Engenharia</h1>
+        <span class="hero-badge">
+          <i class="fas fa-info-circle"></i> Nossa História
+        </span>
+        <h1 class="page-title">Conheça a <span class="editorial-title">Tereshkova</span></h1>
+        <p class="page-subtitle">Tradição, inovação e compromisso com a excelência em engenharia elétrica.</p>
       </div>
     </section>
 
-    <!-- Nossa História -->
-    <section class="section history-section">
-      <div class="container">
-        <div class="history-container">
-          <div class="history-content">
-            <h2 class="section-title">Nossa História</h2>
-            <p class="history-text">
-              A <strong>Tereshkova Engenharia</strong> é uma empresa especializada em soluções em engenharia elétrica, fundada com o objetivo de oferecer <strong>qualidade, segurança e inovação</strong> em cada projeto.
-            </p>
-            <p class="history-text">
-              Nosso nome é uma homenagem à primeira mulher a ir ao espaço, <strong>Valentina Tereshkova</strong>, simbolizando nossa busca por superar limites e alcançar a excelência. Assim como ela quebrou barreiras, nós buscamos inovar constantemente no setor de engenharia elétrica.
-            </p>
-            <p class="history-text">
-              Com uma equipe de profissionais certificados e experientes, atuamos em diversos segmentos, desde residências até indústrias, sempre priorizando a conformidade com normas técnicas e a satisfação do cliente.
-            </p>
-            <p class="history-text">
-              Ao longo dos anos, construímos uma reputação sólida baseada em <strong>comprometimento, expertise técnico e relacionamento transparente</strong> com nossos clientes e parceiros.
-            </p>
-          </div>
-          <div class="history-image">
-            <img src="/images/equipe.jpg" alt="Equipe da Tereshkova Engenharia" loading="lazy">
-          </div>
+    <!-- History Section -->
+    <section class="section">
+      <div class="container history-container">
+        <div class="history-content">
+          <span class="text-secondary text-sm font-semibold uppercase tracking-wider">Nossa Trajetória</span>
+          <h2 class="section-title mt-xs">Mais de uma década de <span class="editorial-title">Inovação</span></h2>
+          <p class="history-text">
+            Fundada com o propósito de elevar os padrões de engenharia elétrica em Santa Maria e região, a Tereshkova Engenharia se destacou por sua abordagem técnica impecável e soluções sob medida para cada cliente. Ao longo dos anos, construímos uma reputação baseada na confiança, qualidade e inovação constante.
+          </p>
+          <p class="history-text">
+            Nosso nome é uma homenagem à primeira mulher a ir ao espaço, Valentina Tereshkova, simbolizando nossa busca por ultrapassar limites e alcançar novos patamares de excelência em cada projeto que entregamos.
+          </p>
+          <a href="https://wa.me/556992158799" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large mt-lg">
+            <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> Fale com a gente
+          </a>
+        </div>
+        <div class="history-image card-zoom">
+          <img src="/images/obra-concluida.jpg" alt="Projeto concluído pela Tereshkova Engenharia">
         </div>
       </div>
     </section>
 
-    <!-- Missão, Visão e Valores -->
-    <section class="section mvv-section">
+    <!-- MVV Section -->
+    <section class="section" style="background-color: var(--bg-light);">
       <div class="container">
-        <h2 class="section-title">Missão, Visão e Valores</h2>
+        <div class="text-center mb-xl">
+          <span class="text-secondary text-sm font-semibold uppercase tracking-wider">Nossos Pilares</span>
+          <h2 class="section-title mt-xs">Missão, Visão e <span class="editorial-title">Valores</span></h2>
+        </div>
         <div class="mvv-grid">
-          <article class="mvv-card">
-            <div class="mvv-icon"><i class="fas fa-bullseye"></i></div>
+          <div class="mvv-card glass-card">
+            <div class="mvv-icon"><i class="fas fa-target"></i></div>
             <h3 class="mvv-title">Missão</h3>
-            <p class="mvv-description">Fornecer soluções em engenharia elétrica com qualidade, segurança e eficiência, superando as expectativas dos clientes.</p>
-          </article>
-          <article class="mvv-card">
+            <p class="mvv-description">Entregar soluções em engenharia elétrica com máxima eficiência, segurança e inovação, superando as expectativas dos nossos clientes.</p>
+          </div>
+          <div class="mvv-card glass-card">
             <div class="mvv-icon"><i class="fas fa-eye"></i></div>
             <h3 class="mvv-title">Visão</h3>
-            <p class="mvv-description">Ser referência em inovação e excelência no setor de engenharia elétrica no Brasil.</p>
-          </article>
-          <article class="mvv-card">
+            <p class="mvv-description">Ser referência nacional em engenharia elétrica, reconhecida pela excelência técnica e compromisso com o desenvolvimento sustentável.</p>
+          </div>
+          <div class="mvv-card glass-card">
             <div class="mvv-icon"><i class="fas fa-heart"></i></div>
             <h3 class="mvv-title">Valores</h3>
-            <p class="mvv-description">Ética, transparência, compromisso com a segurança e busca constante por melhoria contínua.</p>
-          </article>
+            <p class="mvv-description">Ética, transparência, qualidade técnica, inovação contínua e respeito ao meio ambiente e às pessoas.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Diferenciais -->
-    <section class="section differentiators-section">
+    <!-- Differentiators Section -->
+    <section class="section">
       <div class="container">
-        <h2 class="section-title">Nossos Diferenciais</h2>
+        <div class="text-center mb-xl">
+          <span class="text-secondary text-sm font-semibold uppercase tracking-wider">Diferenciais</span>
+          <h2 class="section-title mt-xs">O que nos <span class="editorial-title">Diferencia</span></h2>
+        </div>
         <div class="differentiators-grid">
-          <div class="differentiator-card">
+          <div class="differentiator-card glass-card">
+            <div class="differentiator-icon"><i class="fas fa-users"></i></div>
+            <h3 class="differentiator-title">Equipe Especializada</h3>
+            <p class="differentiator-text">Engenheiros e técnicos altamente qualificados com certificações e experiência comprovada no setor.</p>
+          </div>
+          <div class="differentiator-card glass-card">
             <div class="differentiator-icon"><i class="fas fa-certificate"></i></div>
-            <h4 class="differentiator-title">Equipe Certificada</h4>
-            <p class="differentiator-text">Todos os nossos profissionais são certificados e passam por treinamentos contínuos.</p>
+            <h3 class="differentiator-title">Conformidade Total</h3>
+            <p class="differentiator-text">Todos os nossos projetos seguem rigorosamente as normas ABNT, NR-10 e regulamentações locais.</p>
           </div>
-          <div class="differentiator-card">
+          <div class="differentiator-card glass-card">
             <div class="differentiator-icon"><i class="fas fa-shield-alt"></i></div>
-            <h4 class="differentiator-title">Segurança Acima de Tudo</h4>
-            <p class="differentiator-text">Seguimos rigorosamente a NR-10 e todas as normas de segurança do setor.</p>
-          </div>
-          <div class="differentiator-card">
-            <div class="differentiator-icon"><i class="fas fa-clock"></i></div>
-            <h4 class="differentiator-title">Prazos Garantidos</h4>
-            <p class="differentiator-text">Comprometemo-nos com prazos realistas e os cumprimos com transparência.</p>
-          </div>
-          <div class="differentiator-card">
-            <div class="differentiator-icon"><i class="fas fa-handshake"></i></div>
-            <h4 class="differentiator-title">Relacionamento Próximo</h4>
-            <p class="differentiator-text">Mantemos comunicação constante com nossos clientes durante todo o projeto.</p>
-          </div>
-          <div class="differentiator-card">
-            <div class="differentiator-icon"><i class="fas fa-lightbulb"></i></div>
-            <h4 class="differentiator-title">Soluções Inovadoras</h4>
-            <p class="differentiator-text">Utilizamos as mais modernas tecnologias e metodologias do mercado.</p>
-          </div>
-          <div class="differentiator-card">
-            <div class="differentiator-icon"><i class="fas fa-check-double"></i></div>
-            <h4 class="differentiator-title">Qualidade Comprovada</h4>
-            <p class="differentiator-text">Nossos serviços são respaldados por garantia e pelo histórico de satisfação dos clientes.</p>
+            <h3 class="differentiator-title">Segurança Acima de Tudo</h3>
+            <p class="differentiator-text">Implementamos protocolos de segurança rigorosos em todas as etapas, da concepção à execução.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="section cta-section">
-      <div class="container cta-container">
-        <h2 class="cta-title">Pronto para começar seu projeto?</h2>
-        <p class="cta-subtitle">Entre em contato e descubra como podemos ajudar sua empresa ou residência.</p>
-        <a href="/contato#formulario" class="btn btn-primary btn-large">Fale Conosco</a>
-      </div>
-    </section>
+    <CtaSection
+      title="Pronto para transformar seu projeto?"
+      subtitle="Conte com nossa expertise para levar sua instalação elétrica a um novo patamar de qualidade e eficiência."
+      buttonText="Falar no WhatsApp ((69) 9215-8799)"
+      buttonLink="https://wa.me/556992158799"
+    />
   </main>
 
   <Footer />
