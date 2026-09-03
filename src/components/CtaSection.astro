@@ -1,0 +1,23 @@
+---
+interface Props {
+  title?: string;
+  subtitle?: string;
+  buttonText?: string;
+  buttonLink?: string;
+}
+
+const {
+  title = "Precisa de um Orçamento?",
+  subtitle = "Entre em contato e solicite uma avaliação sem compromisso.",
+  buttonText = "Solicite Agora",
+  buttonLink = "https://wa.me/556992158799"
+} = Astro.props;
+---
+
+<section class="section cta-section">
+  <div class="container cta-container text-center">
+    <h2 class="cta-title">{title}</h2>
+    <p class="cta-subtitle">{subtitle}</p>
+    <a href={buttonLink} target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">{buttonText}</a>
+  </div>
+</section>
