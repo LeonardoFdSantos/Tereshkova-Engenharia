@@ -1,6 +1,7 @@
 ---
 const currentPath = Astro.url.pathname;
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : import.meta.env.BASE_URL + '/';
+const cleanBase = base.endsWith('/') ? base.slice(0, -1) : base;
 ---
 
 <header class="header">
@@ -11,10 +12,10 @@ const base = import.meta.env.BASE_URL;
     </a>
     <nav class="navbar">
       <ul class="nav-links">
-        <li><a href={`${base}`} class={`nav-link ${currentPath === '/' || currentPath === '/Tereshkova-Engenharia/' ? 'active' : ''}`}>Início</a></li>
-        <li><a href={`${base}servicos`} class={`nav-link ${currentPath.includes('/servicos') ? 'active' : ''}`}>Serviços</a></li>
-        <li><a href={`${base}sobre`} class={`nav-link ${currentPath.includes('/sobre') ? 'active' : ''}`}>Sobre</a></li>
-        <li><a href={`${base}contato`} class={`nav-link ${currentPath.includes('/contato') ? 'active' : ''}`}>Contato</a></li>
+        <li><a href={base} class={`nav-link ${currentPath === cleanBase || currentPath === cleanBase + '/' || currentPath === '/' ? 'active' : ''}`}>Início</a></li>
+        <li><a href={`${cleanBase}/servicos`} class={`nav-link ${currentPath.includes('/servicos') ? 'active' : ''}`}>Serviços</a></li>
+        <li><a href={`${cleanBase}/sobre`} class={`nav-link ${currentPath.includes('/sobre') ? 'active' : ''}`}>Sobre</a></li>
+        <li><a href={`${cleanBase}/contato`} class={`nav-link ${currentPath.includes('/contato') ? 'active' : ''}`}>Contato</a></li>
       </ul>
       <a href="https://wa.me/556992158799" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Solicite Orçamento</a>
     </nav>
@@ -29,10 +30,10 @@ const base = import.meta.env.BASE_URL;
 <div class="mobile-menu" id="mobile-menu">
   <nav class="mobile-nav">
     <ul class="mobile-nav-links">
-      <li><a href={`${base}`} class="mobile-nav-link">Início</a></li>
-      <li><a href={`${base}servicos`} class="mobile-nav-link">Serviços</a></li>
-      <li><a href={`${base}sobre`} class="mobile-nav-link">Sobre</a></li>
-      <li><a href={`${base}contato`} class="mobile-nav-link">Contato</a></li>
+      <li><a href={base} class="mobile-nav-link">Início</a></li>
+      <li><a href={`${cleanBase}/servicos`} class="mobile-nav-link">Serviços</a></li>
+      <li><a href={`${cleanBase}/sobre`} class="mobile-nav-link">Sobre</a></li>
+      <li><a href={`${cleanBase}/contato`} class="mobile-nav-link">Contato</a></li>
       <li><a href="https://wa.me/556992158799" target="_blank" rel="noopener noreferrer" class="btn btn-primary mobile-cta">Solicite Orçamento</a></li>
     </ul>
   </nav>
