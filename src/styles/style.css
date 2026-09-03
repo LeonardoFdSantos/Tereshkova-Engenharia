@@ -260,7 +260,7 @@ img {
   position: relative;
   height: 100vh;
   min-height: 600px;
-  background: linear-gradient(rgba(11, 29, 58, 0.8), rgba(11, 29, 58, 0.8)), url('../images/engenheira-industrial.avif') center/cover no-repeat;
+  background: linear-gradient(rgba(11, 29, 58, 0.8), rgba(11, 29, 58, 0.8)), url('/Tereshkova-Engenharia/images/engenheira-industrial.avif') center/cover no-repeat;
   display: flex;
   align-items: center;
   text-align: center;
@@ -424,7 +424,7 @@ img {
 
 /* Page Header */
 .page-header {
-  background: linear-gradient(rgba(11, 29, 58, 0.85), rgba(11, 29, 58, 0.85)), url('../images/engenheira-industrial.avif') center/cover no-repeat;
+  background: linear-gradient(rgba(11, 29, 58, 0.85), rgba(11, 29, 58, 0.85)), url('/Tereshkova-Engenharia/images/engenheira-industrial.avif') center/cover no-repeat;
   padding: 140px 0 60px;
   text-align: center;
   color: var(--white);
