@@ -24,85 +24,103 @@ import CtaSection from '../components/CtaSection.astro';
       </div>
     </section>
 
-    <!-- Contact Info Cards -->
+    <!-- Contact Section -->
     <section class="section">
       <div class="container">
-        <div class="contact-info-grid">
-          <div class="contact-info-card glass-card">
-            <div class="contact-info-icon"><i class="fas fa-phone-alt"></i></div>
-            <h3 class="contact-info-title">Telefone / WhatsApp</h3>
-            <p class="contact-info-text">(69) 99215-8799<br>(55) 99642-7551</p>
-          </div>
-          <div class="contact-info-card glass-card">
-            <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
-            <h3 class="contact-info-title">E-mail</h3>
-            <p class="contact-info-text">tereshkova.engenharia@gmail.com</p>
-          </div>
-          <div class="contact-info-card glass-card">
-            <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
-            <h3 class="contact-info-title">Endereço</h3>
-            <p class="contact-info-text">Rua João da Fontoura e Souza, 215, Camobi<br>Santa Maria/RS - CEP: 97.105-210</p>
-          </div>
-        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
 
-        <!-- WhatsApp Direct CTA Banner -->
-        <div class="text-center mb-2xl" style="background: linear-gradient(135deg, #0a1e3a 0%, #0f2847 100%); padding: 50px; border-radius: var(--radius-lg); color: var(--white); box-shadow: var(--shadow-lg);">
-          <h2 class="editorial-title" style="font-size: 2.25rem; margin-bottom: 15px;">Atendimento Imediato via WhatsApp</h2>
-          <p style="color: rgba(255,255,255,0.85); font-size: 1.125rem; margin-bottom: 25px; max-width: 600px; margin-left: auto; margin-right: auto;">
-            Precisa de uma resposta rápida para sua obra ou projeto? Clique no botão abaixo e fale direto com nossos engenheiros.
-          </p>
-          <a href="https://wa.me/556992158799" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large" style="background: #25D366; border: none;">
-            <i class="fab fa-whatsapp" style="font-size: 1.25rem; margin-right: 10px;"></i> Fale no WhatsApp
-          </a>
-        </div>
+          <!-- Contact Form (Lovable Layout) -->
+          <div class="glass-card" id="formulario" style="padding: 40px; border-radius: 16px; background: var(--white); box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+            <div class="text-center mb-lg">
+              <span class="text-secondary text-sm font-semibold uppercase tracking-wider">Formulário</span>
+              <h2 class="section-title mt-xs" style="font-size: 28px; font-weight: 700; color: var(--secondary-color);">Solicite um <span class="editorial-title">Orçamento</span></h2>
+              <p class="form-subtitle" style="color: var(--text-light); font-size: 14px; margin-top: 8px;">Preencha o formulário abaixo e entraremos em contato o mais rápido possível.</p>
+            </div>
 
-        <!-- Contact Form -->
-        <div class="form-container glass-card" id="formulario">
-          <div class="text-center mb-lg">
-            <span class="text-secondary text-sm font-semibold uppercase tracking-wider">Formulário</span>
-            <h2 class="section-title mt-xs">Envie sua <span class="editorial-title">Mensagem</span></h2>
-            <p class="form-subtitle">Preencha os campos abaixo e entraremos em contato o mais breve possível.</p>
-          </div>
+            <form id="contact-form" style="display: flex; flex-direction: column; gap: 20px;">
+              <div class="form-group">
+                <label for="nome" style="display: block; font-size: 14px; font-weight: 600; color: var(--secondary-color); margin-bottom: 8px;">Nome *</label>
+                <input type="text" id="nome" name="nome" required placeholder="Seu nome completo" style="width: 100%; padding: 12px 16px; border: 1px solid #e4e4e7; border-radius: 8px; font-size: 14px; font-family: inherit; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='#E53E3E'" onblur="this.style.borderColor='#e4e4e7'">
+              </div>
 
-          <form id="contact-form">
-            <div class="form-grid">
               <div class="form-group">
-                <label for="nome" class="form-label">Nome Completo</label>
-                <input type="text" id="nome" name="nome" class="form-input" required placeholder="Seu nome">
+                <label for="email" style="display: block; font-size: 14px; font-weight: 600; color: var(--secondary-color); margin-bottom: 8px;">E-mail *</label>
+                <input type="email" id="email" name="email" required placeholder="seu@email.com" style="width: 100%; padding: 12px 16px; border: 1px solid #e4e4e7; border-radius: 8px; font-size: 14px; font-family: inherit; outline: none;" onfocus="this.style.borderColor='#E53E3E'" onblur="this.style.borderColor='#e4e4e7'">
               </div>
+
               <div class="form-group">
-                <label for="email" class="form-label">E-mail</label>
-                <input type="email" id="email" name="email" class="form-input" required placeholder="seu.email@exemplo.com">
+                <label for="telefone" style="display: block; font-size: 14px; font-weight: 600; color: var(--secondary-color); margin-bottom: 8px;">Telefone / WhatsApp</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(69) 99215-8799" style="width: 100%; padding: 12px 16px; border: 1px solid #e4e4e7; border-radius: 8px; font-size: 14px; font-family: inherit; outline: none;" onfocus="this.style.borderColor='#E53E3E'" onblur="this.style.borderColor='#e4e4e7'">
               </div>
+
               <div class="form-group">
-                <label for="telefone" class="form-label">Telefone / WhatsApp</label>
-                <input type="tel" id="telefone" name="telefone" class="form-input" required placeholder="(69) 99999-9999">
-              </div>
-              <div class="form-group">
-                <label for="assunto" class="form-label">Assunto</label>
-                <select id="assunto" name="assunto" class="form-input" required>
-                  <option value="">Selecione uma opção</option>
-                  <option value="Projeto Residencial/Comercial">Projeto Residencial / Comercial</option>
-                  <option value="Projeto Industrial/Subestação">Projeto Industrial / Subestação</option>
-                  <option value="Automação Elétrica">Automação Elétrica</option>
-                  <option value="Manutenção">Manutenção Preventiva / Corretiva</option>
-                  <option value="Energia Solar">Energia Solar Fotovoltaica</option>
-                  <option value="Laudos Técnicos (NR-10)">Laudos Técnicos (NR-10 / SPDA)</option>
-                  <option value="Outros">Outros</option>
+                <label for="assunto" style="display: block; font-size: 14px; font-weight: 600; color: var(--secondary-color); margin-bottom: 8px;">Serviço de Interesse</label>
+                <select id="assunto" name="assunto" required style="width: 100%; padding: 12px 16px; border: 1px solid #e4e4e7; border-radius: 8px; font-size: 14px; font-family: inherit; background: white; outline: none;" onfocus="this.style.borderColor='#E53E3E'" onblur="this.style.borderColor='#e4e4e7'">
+                  <option value="" selected disabled>Selecione um serviço</option>
+                  <option value="Instalação Elétrica Residencial">Instalação Elétrica Residencial</option>
+                  <option value="Instalação Elétrica Industrial">Instalação Elétrica Industrial e Preventiva/Corretiva</option>
+                  <option value="Projetos Elétricos">Projetos Elétricos</option>
+                  <option value="Automações Elétricas">Automações Elétricas</option>
+                  <option value="Reparos Elétricos">Reparos Elétricos</option>
+                  <option value="Quadros Elétricos e Medições">Quadros Elétricos e Medições</option>
+                  <option value="Laudos Técnicos e Medições">Laudos Técnicos e Medições (NR-10 / SPDA)</option>
                 </select>
               </div>
-              <div class="form-group full-width">
-                <label for="mensagem" class="form-label">Mensagem / Detalhes do Projeto</label>
-                <textarea id="mensagem" name="mensagem" class="form-textarea" required placeholder="Descreva brevemente o que você precisa..."></textarea>
+
+              <div class="form-group">
+                <label for="mensagem" style="display: block; font-size: 14px; font-weight: 600; color: var(--secondary-color); margin-bottom: 8px;">Mensagem *</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Descreva seu projeto ou dúvida..." style="width: 100%; padding: 12px 16px; border: 1px solid #e4e4e7; border-radius: 8px; font-size: 14px; font-family: inherit; outline: none; resize: vertical;" onfocus="this.style.borderColor='#E53E3E'" onblur="this.style.borderColor='#e4e4e7'"></textarea>
               </div>
-              <div class="form-group full-width">
-                <button type="submit" class="form-submit btn-primary">
-                  <span>Enviar Mensagem</span> <i class="fas fa-paper-plane" style="margin-left: 8px;"></i>
-                </button>
-              </div>
+
+              <button type="submit" style="width: 100%; background: var(--primary-color); color: white; border: none; padding: 14px 24px; border-radius: 8px; font-weight: 600; font-size: 15px; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 4px 12px rgba(229,62,62,0.3);" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
+                <span>Enviar Mensagem</span> <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+            <div id="form-status" style="margin-top: 16px; text-align: center; font-weight: 600; font-size: 14px;"></div>
+          </div>
+
+          <!-- Contact Info (Lovable Layout) -->
+          <div style="display: flex; flex-direction: column; gap: 30px;">
+            <div class="glass-card" style="padding: 40px; border-radius: 16px; background: var(--white); box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+              <h2 style="font-size: 24px; font-weight: 700; color: var(--secondary-color); margin-bottom: 12px;">Nossas Informações de Contato</h2>
+              <p style="color: var(--text-light); font-size: 14px; margin-bottom: 24px;">Estamos disponíveis para atender você de segunda a sexta, das 8h às 18h.</p>
+
+              <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 20px;">
+                <li style="display: flex; align-items: flex-start; gap: 16px;">
+                  <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(229, 62, 62, 0.1); color: var(--primary-color); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;"><i class="fas fa-phone-alt"></i></div>
+                  <div>
+                    <span style="display: block; font-size: 12px; font-weight: 700; color: var(--text-light); text-transform: uppercase;">Telefone</span>
+                    <a href="tel:+5569992158799" style="font-size: 15px; font-weight: 600; color: var(--secondary-color); text-decoration: none;">(69) 99215-8799</a>
+                  </div>
+                </li>
+
+                <li style="display: flex; align-items: flex-start; gap: 16px;">
+                  <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(37, 211, 102, 0.1); color: #25D366; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;"><i class="fab fa-whatsapp"></i></div>
+                  <div>
+                    <span style="display: block; font-size: 12px; font-weight: 700; color: var(--text-light); text-transform: uppercase;">WhatsApp</span>
+                    <a href="https://wa.me/556992158799" target="_blank" rel="noopener noreferrer" style="font-size: 15px; font-weight: 600; color: var(--secondary-color); text-decoration: none;">(69) 99215-8799 / (55) 99642-7551</a>
+                  </div>
+                </li>
+
+                <li style="display: flex; align-items: flex-start; gap: 16px;">
+                  <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(229, 62, 62, 0.1); color: var(--primary-color); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;"><i class="fas fa-envelope"></i></div>
+                  <div>
+                    <span style="display: block; font-size: 12px; font-weight: 700; color: var(--text-light); text-transform: uppercase;">E-mail</span>
+                    <a href="mailto:tereshkova.engenharia@gmail.com" style="font-size: 15px; font-weight: 600; color: var(--secondary-color); text-decoration: none;">tereshkova.engenharia@gmail.com</a>
+                  </div>
+                </li>
+
+                <li style="display: flex; align-items: flex-start; gap: 16px;">
+                  <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(229, 62, 62, 0.1); color: var(--primary-color); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;"><i class="fas fa-map-marker-alt"></i></div>
+                  <div>
+                    <span style="display: block; font-size: 12px; font-weight: 700; color: var(--text-light); text-transform: uppercase;">Endereço</span>
+                    <span style="font-size: 15px; font-weight: 600; color: var(--secondary-color);">Rua João da Fontoura e Souza, 215, Camobi — Santa Maria/RS</span>
+                  </div>
+                </li>
+              </ul>
             </div>
-            <div id="form-status" class="form-status" style="margin-top: 20px; text-align: center; font-weight: 600;"></div>
-          </form>
+          </div>
+
         </div>
       </div>
     </section>
