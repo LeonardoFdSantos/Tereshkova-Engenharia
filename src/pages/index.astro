@@ -2,73 +2,87 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import CtaSection from '../components/CtaSection.astro';
 ---
 
 <BaseLayout
   title="Tereshkova Engenharia | Soluções em Engenharia Elétrica"
-  description="Empresa especializada em projetos, automação e manutenção elétrica para residências, indústrias e empresas."
-  keywords="engenharia elétrica, projetos elétricos, automação, manutenção elétrica, laudos técnicos, Tereshkova Engenharia"
+  description="Empresa especializada em projetos, automação e manutenção elétrica com padrão de excelência e design imersivo."
+  keywords="engenharia elétrica, projetos elétricos, automação, manutenção elétrica, laudos técnicos, Santa Maria"
 >
   <Header />
 
   <main>
-    <!-- Hero Section -->
+    <!-- Hero Section: Imersivo & Editorial -->
     <section class="hero">
-      <div class="hero-overlay"></div>
-      <div class="hero-content container">
-        <h1 class="hero-title">Soluções em Engenharia Elétrica com Excelência e Segurança</h1>
-        <p class="hero-subtitle">Projetos, automação e manutenção para residências, indústrias e empresas.</p>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="fas fa-bolt"></i> Excelência em Engenharia Elétrica
+        </div>
+        <h1 class="hero-title">
+          Construindo o <span class="editorial-title">Futuro</span> com Precisão e Inovação
+        </h1>
+        <p class="hero-subtitle">
+          Soluções avançadas em projetos, automação e manutenção elétrica para o setor residencial, comercial e industrial.
+        </p>
         <div class="hero-buttons">
-          <a href="/servicos" class="btn btn-outline">Nossos Serviços</a>
-          <a href="/contato#formulario" class="btn btn-primary">Fale Conosco</a>
+          <a href="https://wa.me/556992158799" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
+            <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> Falar no WhatsApp
+          </a>
+          <a href="/servicos" class="btn btn-outline btn-large">Nossos Serviços</a>
         </div>
       </div>
     </section>
 
-    <!-- Serviços em Destaque -->
+    <!-- Services Featured Section -->
     <section class="section services-featured">
       <div class="container">
-        <h2 class="section-title">Nossos Serviços</h2>
+        <div class="text-center mb-xl">
+          <span class="text-secondary text-sm font-semibold uppercase tracking-wider">O que fazemos</span>
+          <h2 class="section-title mt-xs">Engenharia de <span class="editorial-title">Alto Padrão</span></h2>
+          <p class="section-subtitle">Combinamos rigor técnico e inovação para entregar projetos seguros, eficientes e sob medida.</p>
+        </div>
+
         <div class="services-grid">
-          <article class="service-card">
-            <div class="service-icon"><i class="fas fa-drafting-compass"></i></div>
-            <h3 class="service-title">Projetos Elétricos</h3>
-            <p class="service-description">Residencial, industrial, preventivo e corretivo. Conformidade com normas técnicas.</p>
-            <a href="/servicos#projetos-eletricos" class="btn btn-link">Saiba Mais <i class="fas fa-arrow-right"></i></a>
-          </article>
-          <article class="service-card">
-            <div class="service-icon"><i class="fas fa-cogs"></i></div>
-            <h3 class="service-title">Automações Elétricas</h3>
-            <p class="service-description">Sistemas inteligentes para otimizar energia e segurança.</p>
-            <a href="/servicos#automacoes" class="btn btn-link">Saiba Mais <i class="fas fa-arrow-right"></i></a>
-          </article>
-          <article class="service-card">
-            <div class="service-icon"><i class="fas fa-clipboard-check"></i></div>
-            <h3 class="service-title">Laudos Técnicos e Medições</h3>
-            <p class="service-description">Análises precisas para conformidade e eficiência.</p>
-            <a href="/servicos#laudos" class="btn btn-link">Saiba Mais <i class="fas fa-arrow-right"></i></a>
-          </article>
+          <ServiceCard
+            icon="fas fa-drafting-compass"
+            title="Projetos Elétricos"
+            description="Elaboração de projetos residenciais, comerciais e industriais em total conformidade com as normas técnicas vigentes."
+            link="/servicos"
+          />
+          <ServiceCard
+            icon="fas fa-cogs"
+            title="Automação Industrial"
+            description="Sistemas automatizados inteligentes para otimização de processos, aumento de produtividade e segurança operacional."
+            link="/servicos"
+          />
+          <ServiceCard
+            icon="fas fa-tools"
+            title="Manutenção Preventiva"
+            description="Inspeções detalhadas, testes em equipamentos e manutenções programadas para evitar paradas não planejadas."
+            link="/servicos"
+          />
         </div>
       </div>
     </section>
 
-    <!-- Por Que Escolher -->
-    <section class="section why-choose">
+    <!-- Why Choose Us / Immersive Section -->
+    <section class="section why-choose-section">
       <div class="container why-choose-container">
-        <div class="why-choose-image">
-          <img src="/images/obra-concluida.jpg" alt="Obra elétrica concluída pela Tereshkova Engenharia" loading="lazy">
+        <div class="why-choose-image card-zoom">
+          <img src="/images/obra-concluida.jpg" alt="Obra concluída pela Tereshkova Engenharia">
         </div>
         <div class="why-choose-content">
-          <h2 class="section-title">Qualidade e Confiança em Cada Projeto</h2>
+          <span class="text-secondary text-sm font-semibold uppercase tracking-wider">Por que nos escolher</span>
+          <h2 class="section-title">Compromisso absoluto com a <span class="editorial-title">Qualidade</span></h2>
           <p class="why-choose-text">
-            Na Tereshkova Engenharia, combinamos expertise técnico com compromisso inquebrantável com a segurança e a qualidade.
-            Nossa equipe certificada garante soluções que atendem às mais rigorosas normas do setor.
+            Nossa equipe de engenheiros altamente qualificados garante que cada etapa do seu projeto seja executada com precisão cirúrgica, segurança inegociável e cumprimento rigoroso de prazos.
           </p>
           <ul class="differentials-list">
-            <li class="differential-item"><i class="fas fa-check-circle"></i> Equipe especializada e certificada</li>
-            <li class="differential-item"><i class="fas fa-check-circle"></i> Prazos ágeis e transparentes</li>
-            <li class="differential-item"><i class="fas fa-check-circle"></i> Conformidade com NR-10 e normas ABNT</li>
-            <li class="differential-item"><i class="fas fa-check-circle"></i> Atendimento personalizado</li>
+            <li class="differential-item"><i class="fas fa-check-circle"></i> Equipe técnica certificada e experiente</li>
+            <li class="differential-item"><i class="fas fa-check-circle"></i> Rigoroso cumprimento de prazos e normas ABNT</li>
+            <li class="differential-item"><i class="fas fa-check-circle"></i> Atendimento consultivo e personalizado</li>
           </ul>
           <a href="/sobre" class="btn btn-primary">Conheça Nossa História</a>
         </div>
@@ -76,13 +90,12 @@ import Footer from '../components/Footer.astro';
     </section>
 
     <!-- CTA Section -->
-    <section class="section cta-section">
-      <div class="container cta-container">
-        <h2 class="cta-title">Precisa de um Orçamento?</h2>
-        <p class="cta-subtitle">Entre em contato e solicite uma avaliação sem compromisso.</p>
-        <a href="/contato#formulario" class="btn btn-primary btn-large">Solicite Agora</a>
-      </div>
-    </section>
+    <CtaSection
+      title="Precisa de um Orçamento Imediato?"
+      subtitle="Fale diretamente com nossa equipe técnica via WhatsApp e receba atendimento especializado."
+      buttonText="Falar no WhatsApp ((69) 9215-8799)"
+      buttonLink="https://wa.me/556992158799"
+    />
   </main>
 
   <Footer />
