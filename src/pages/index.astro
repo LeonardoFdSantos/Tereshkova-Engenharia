@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import CtaSection from '../components/CtaSection.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout
@@ -30,7 +31,7 @@ import CtaSection from '../components/CtaSection.astro';
           <a href="https://wa.me/556992158799" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
             <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> Fale no WhatsApp
           </a>
-          <a href="/servicos" class="btn btn-outline btn-large">Nossos Serviços</a>
+          <a href={`${base}servicos`} class="btn btn-outline btn-large">Nossos Serviços</a>
         </div>
       </div>
     </section>
@@ -49,19 +50,19 @@ import CtaSection from '../components/CtaSection.astro';
             icon="fas fa-drafting-compass"
             title="Projetos Elétricos"
             description="Elaboração de projetos residenciais, comerciais e industriais em total conformidade com as normas técnicas vigentes."
-            link="/servicos"
+            link={`${base}servicos`}
           />
           <ServiceCard
             icon="fas fa-cogs"
             title="Automação Industrial"
             description="Sistemas automatizados inteligentes para otimização de processos, aumento de produtividade e segurança operacional."
-            link="/servicos"
+            link={`${base}servicos`}
           />
           <ServiceCard
             icon="fas fa-tools"
             title="Manutenção Preventiva"
             description="Inspeções detalhadas, testes em equipamentos e manutenções programadas para evitar paradas não planejadas."
-            link="/servicos"
+            link={`${base}servicos`}
           />
         </div>
       </div>
@@ -71,7 +72,7 @@ import CtaSection from '../components/CtaSection.astro';
     <section class="section why-choose-section">
       <div class="container why-choose-container">
         <div class="why-choose-image card-zoom">
-          <img src="/images/engenheira-industrial.avif" alt="Engenheira industrial - Tereshkova Engenharia">
+          <img src={`${base}images/engenheira-industrial.avif`} alt="Engenheira industrial - Tereshkova Engenharia">
         </div>
         <div class="why-choose-content">
           <span class="text-secondary text-sm font-semibold uppercase tracking-wider">Por que nos escolher</span>
@@ -84,7 +85,7 @@ import CtaSection from '../components/CtaSection.astro';
             <li class="differential-item"><i class="fas fa-check-circle"></i> Rigoroso cumprimento de prazos e normas ABNT</li>
             <li class="differential-item"><i class="fas fa-check-circle"></i> Atendimento consultivo e personalizado</li>
           </ul>
-          <a href="/sobre" class="btn btn-primary">Conheça Nossa História</a>
+          <a href={`${base}sobre`} class="btn btn-primary">Conheça Nossa História</a>
         </div>
       </div>
     </section>

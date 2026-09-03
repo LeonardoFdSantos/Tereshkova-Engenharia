@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CtaSection from '../components/CtaSection.astro';
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout
@@ -41,7 +42,7 @@ import CtaSection from '../components/CtaSection.astro';
           </a>
         </div>
         <div class="history-image card-zoom">
-          <img src="/images/engenheira-industrial.avif" alt="Engenheira industrial - Tereshkova Engenharia">
+          <img src={`${base}images/engenheira-industrial.avif`} alt="Engenheira industrial - Tereshkova Engenharia">
         </div>
       </div>
     </section>
