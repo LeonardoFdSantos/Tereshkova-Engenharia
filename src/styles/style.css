@@ -37,6 +37,50 @@ body {
   background-color: var(--white);
 }
 
+/* Page Transition Effects */
+.page-transition {
+  opacity: 0;
+  animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Reveal Animation for Scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Professional Unsplash Images for Seriousness */
+.hero {
+  background: var(--gradient-hero), url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+}
+
+.why-choose-image img {
+  background: url('https://images.unsplash.com/photo-1581092921447-14d0955f7475?q=80&w=800&auto=format&fit=crop') center/cover no-repeat;
+}
+
+.history-image img {
+  background: url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=800&auto=format&fit=crop') center/cover no-repeat;
+}
+
+.cta-section {
+  background: var(--gradient-cta), url('https://images.unsplash.com/photo-1581092921447-14d0955f7475?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+}
+
+.page-header {
+  background: var(--gradient-hero), url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+}
+
 a {
   text-decoration: none;
   color: inherit;

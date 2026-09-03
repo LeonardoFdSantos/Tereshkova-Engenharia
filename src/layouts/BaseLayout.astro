@@ -30,9 +30,9 @@ const { title, description, keywords = '' } = Astro.props;
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <title>{title} | Tereshkova Engenharia</title>
 </head>
-<body>
+<body class="page-transition">
   <slot />
-  <a href="https://wa.me/556992158799" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Fale conosco pelo WhatsApp">
+  <a href="https://wa.me/556992158799" target="_blank" rel="noopener noreferrer" class="whatsapp-float pulse-glow" aria-label="Fale conosco pelo WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
   <script is:inline src="/js/script.js"></script>
